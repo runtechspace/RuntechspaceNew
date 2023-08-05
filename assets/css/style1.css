@@ -11,10 +11,10 @@
   --color-default-rgb: 33, 37, 41;
   --color-background: #ffffff;
   --color-background-rgb: 255, 255, 255;
-  --color-primary: #e84545;
-  --color-primary-rgb: 232, 69, 69;
+  --color-primary: #0094Ac;
+  --color-primary-rgb: #0094Ac;
   --color-secondary: #32353a;
-  --color-secondary-rgb: 50, 53, 58;
+  --color-secondary-rgb: #10E9FF;
   --color-box-background: #ffffff;
   --color-box-background-rgb: 255, 255, 255;
   --color-inverse: #ffffff;
@@ -24,9 +24,9 @@
 /* Nav Menu Colors */
 :root {
   --color-nav: #3a3939;
-  --color-nav-hover: #e84545;
+  --color-nav-hover: #0094Ac;
   --color-nav-dropdown: #3a3939;
-  --color-nav-dropdown-hover: #e84545;
+  --color-nav-dropdown-hover: #0094Ac;
   --color-nav-dropdown-background: #ffffff;
   --color-nav-mobile-background: #ffffff;
 }
@@ -52,7 +52,7 @@ a {
 }
 
 a:hover {
-  color: rgba(var(--color-primary-rgb), 0.7);
+  color: #0094Ac;
   text-decoration: none;
 }
 
@@ -192,14 +192,14 @@ section {
   font-size: 14px;
   padding: 8px 26px;
   margin: 0;
-  border-radius: 4px;
+  border-radius: 24px;
   transition: 0.3s;
 }
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--color-inverse);
-  background: rgba(var(--color-primary-rgb), 0.85);
+  background: #0094Ac;
 }
 
 @media (max-width: 1200px) {
@@ -224,7 +224,7 @@ section {
   --color-background: #ffffff;
   --color-secondary: #444444;
   --color-nav: #444444;
-  --color-nav-hover: #e84545;
+  --color-nav-hover: #0094Ac;
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -255,7 +255,7 @@ section {
   --color-background: #ffffff;
   --color-secondary: #444444;
   --color-nav: #444444;
-  --color-nav-hover: #d83535;
+  --color-nav-hover: #0094Ac;
 }
 
 /*--------------------------------------------------------------
@@ -472,7 +472,7 @@ section {
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s;
-    background-color: rgba(var(--color-primary-rgb), 0.1);
+    background-color: #0094Ac;
   }
 
   .navmenu a i:hover,
@@ -567,7 +567,7 @@ section {
 }
 
 .scroll-top:hover {
-  background-color: rgba(var(--color-primary-rgb), 0.8);
+  background-color: #0094Ac;
   color: #ffffff;
 }
 
@@ -576,16 +576,13 @@ section {
   opacity: 1;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
 #preloader {
   position: fixed;
   inset: 0;
   z-index: 9999;
   overflow: hidden;
-  background-color: var(--color-background);
-  transition: all 0.6s ease-out;
+  background-color: whitesmoke;
+  transition: all 0.4s ease-out;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -594,17 +591,17 @@ section {
 }
 
 #preloader div {
-  width: 13px;
-  height: 13px;
+  width: 50px;
+  height: 5px;
   background-color: var(--color-primary);
-  border-radius: 50%;
-  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  border-radius: 25px;
+  animation-timing-function: cubic-bezier(0.7, 1, 1, 0);
   position: absolute;
-  left: 50%;
+  left: 20%;
 }
 
 #preloader div:nth-child(1) {
-  left: calc(50% + 8px);
+  left: calc(50% + 18px);
   animation: animate-preloader-1 0.6s infinite;
 }
 
@@ -649,7 +646,7 @@ section {
   }
 
   100% {
-    transform: translate(24px, 0);
+    transform: translate(74px, 0);
   }
 }
 
@@ -661,6 +658,8 @@ section {
     transition-delay: 0 !important;
   }
 }
+
+/* Add your other styles here */
 
 /*--------------------------------------------------------------
 # Footer
@@ -841,7 +840,7 @@ section {
 .hero .sign-up-form {
   margin-top: 20px;
   padding: 10px;
-  border-radius: 7px;
+  border-radius: 20px;
   background: var(--color-box-background);
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
 }
@@ -861,12 +860,12 @@ section {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   padding: 8px 20px 10px 20px;
-  border-radius: 7px;
+  border-radius: 25px;
   color: var(--color-inverse);
 }
 
 .hero .sign-up-form input[type=submit]:hover {
-  background-color: rgba(var(--color-primary-rgb), 0.9);
+  background-color: #0094Ac;
 }
 
 @media (max-width: 768px) {
@@ -922,7 +921,7 @@ section {
   font-weight: 500;
   line-height: 19px;
   padding: 10px 20px;
-  background: rgba(var(--color-primary-rgb), 0.05);
+  background: whitesmoke;
   color: var(--color-primary);
   border-radius: 7px;
   display: inline-block;
@@ -960,7 +959,7 @@ section {
 }
 
 .about .content .read-more:hover {
-  background: rgba(var(--color-primary-rgb), 0.8);
+  background: #0094Ac;
   padding-right: 19px;
 }
 
@@ -987,7 +986,7 @@ section {
   font-size: 32px;
   line-height: 0;
   transition: all 0.4s ease-out 0s;
-  background-color: rgba(var(--color-primary-rgb), 0.05);
+  background-color: #0094Ac;
   color: var(--color-primary);
 }
 
@@ -1125,7 +1124,7 @@ section {
   content: "";
   height: 30px;
   width: 30px;
-  background: rgba(var(--color-primary-rgb), 0.3);
+  background: #0094Ac;
   border-radius: 50px;
   z-index: 1;
   bottom: -15px;
@@ -1182,7 +1181,7 @@ section {
 }
 
 .features .features-item .btn-get-started:hover {
-  background-color: rgba(var(--color-primary-rgb), 0.9);
+  background-color: #0094Ac;
 }
 
 .features .features-item ul {
@@ -1407,7 +1406,7 @@ section {
   height: 86px;
   width: 86px;
   border-radius: 50%;
-  background: rgba(var(--color-primary-rgb), 0.2);
+  background: #0094Ac;
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
@@ -1418,7 +1417,7 @@ section {
   height: 102px;
   width: 102px;
   border-radius: 50%;
-  background: rgba(var(--color-primary-rgb), 0.1);
+  background: #0094Ac;
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-2px);
 }
@@ -1504,7 +1503,7 @@ section {
 }
 
 .pricing .featured .buy-btn:hover {
-  background-color: rgba(var(--color-primary-rgb), 0.9);
+  background-color: #0094Ac;
 }
 
 @media (min-width: 992px) {
@@ -1815,7 +1814,7 @@ section {
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: rgba(var(--color-primary-rgb), 0.4);
+  color: #0094Ac;
   font-size: 26px;
   line-height: 0;
 }
@@ -1929,135 +1928,7 @@ section {
   margin-bottom: 0;
 }
 
-/* Contact Section - Home Page
-------------------------------*/
-.contact {
-  --color-box-background: #f7f7f7;
-}
 
-.contact .info-item {
-  background: var(--color-box-background);
-  padding: 30px;
-}
-
-.contact .info-item i {
-  font-size: 38px;
-  line-height: 0;
-  color: var(--color-primary);
-}
-
-.contact .info-item h3 {
-  color: var(--color-secondary);
-  font-size: 20px;
-  font-weight: 700;
-  margin: 20px 0 10px 0;
-}
-
-.contact .info-item p {
-  padding: 0;
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.contact .php-email-form {
-  background: var(--color-box-background);
-  padding: 30px;
-  height: 100%;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  background: #df1529;
-  color: #ffffff;
-  text-align: left;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #ffffff;
-  background: #059652;
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: var(--color-background);
-  text-align: center;
-  padding: 15px;
-  margin-bottom: 24px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid var(--color-primary);
-  border-top-color: var(--color-background);
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--color-default);
-  background-color: rgba(var(--color-background-rgb), 0.5);
-  border-color: rgba(var(--color-default-rgb), 0.2);
-}
-
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--color-primary);
-}
-
-.contact .php-email-form input[type=text]::-moz-placeholder,
-.contact .php-email-form input[type=email]::-moz-placeholder,
-.contact .php-email-form textarea::-moz-placeholder {
-  color: rgba(var(--color-default-rgb), 0.3);
-}
-
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: rgba(var(--color-default-rgb), 0.3);
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--color-primary);
-  color: var(--color-inverse);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: rgba(var(--color-primary-rgb), 0.8);
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # Portfolio Details Page
@@ -2153,7 +2024,7 @@ section {
 }
 
 .portfolio-details .portfolio-info .btn-visit:hover {
-  background: rgba(var(--color-primary-rgb), 0.8);
+  background: #0094Ac;
 }
 
 .portfolio-details .portfolio-description h2 {
@@ -2197,7 +2068,7 @@ section {
 
 .portfolio-details .portfolio-description .testimonial-item .quote-icon-left,
 .portfolio-details .portfolio-description .testimonial-item .quote-icon-right {
-  color: rgba(var(--color-primary-rgb), 0.5);
+  color: #0094Ac;
   font-size: 26px;
   line-height: 0;
 }
@@ -2276,7 +2147,7 @@ section {
 }
 
 .service-details .services-list a:hover {
-  background-color: rgba(var(--color-primary-rgb), 0.05);
+  background-color: #0094Ac;
   color: var(--color-primary);
 }
 
@@ -2659,7 +2530,7 @@ section {
 }
 
 .blog-details .sidebar .search-form form button:hover {
-  background: rgba(var(--color-primary-rgb), 0.8);
+  background: #0094Ac;
 }
 
 .blog-details .sidebar .categories ul {
@@ -2901,5 +2772,5 @@ section {
 
 .blog-details .comments .reply-form .btn-primary:hover {
   color: var(--color-inverse);
-  background-color: rgba(var(--color-primary-rgb), 0.8);
+  background-color: #10E9FF;
 }
