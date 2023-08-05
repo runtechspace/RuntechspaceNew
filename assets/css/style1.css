@@ -595,9 +595,9 @@ section {
   height: 5px;
   background-color: var(--color-primary);
   border-radius: 25px;
-  animation-timing-function: cubic-bezier(0.7, 1, 1, 0);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
   position: absolute;
-  left: 20%;
+  left: 10%;
 }
 
 #preloader div:nth-child(1) {
@@ -606,17 +606,17 @@ section {
 }
 
 #preloader div:nth-child(2) {
-  left: calc(50% + 8px);
+  left: calc(50% + 18px);
   animation: animate-preloader-2 0.6s infinite;
 }
 
 #preloader div:nth-child(3) {
-  left: calc(50% + 32px);
+  left: calc(50% + 18px);
   animation: animate-preloader-2 0.6s infinite;
 }
 
 #preloader div:nth-child(4) {
-  left: calc(50% + 56px);
+  left: calc(50% + 16px);
   animation: animate-preloader-3 0.6s infinite;
 }
 
