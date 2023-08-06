@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /**
    * Scroll top button
    */
-  let scrollTop = document.querySelector('.scroll-top');
+  let scrollTop = document.querySelector('.whatsapp');
 
   function toggleScrollTop() {
     if (scrollTop) {
