@@ -1849,7 +1849,7 @@ section {
   letter-spacing: 1px;
   display: inline-block;
   padding: 12px 40px;
-  border-radius: 5px;
+  border-radius: 25px;
   transition: 0.5s;
   margin: 10px;
   border: 2px solid var(--color-inverse);
