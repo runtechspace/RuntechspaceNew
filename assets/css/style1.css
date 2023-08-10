@@ -1865,6 +1865,7 @@ section {
 ------------------------------*/
 .excos {
   --color-background: #f4f4f4;
+  
 }
 
 .excos .info h3 {
@@ -1874,7 +1875,7 @@ section {
 }
 
 .excos .swiper {
-  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 30px 0 #c9ecf1;
   background: var(--color-box-background);
 }
 
@@ -1911,14 +1912,7 @@ section {
   margin: 0;
 }
 
-.excos .excos-item .stars {
-  margin: 10px 0;
-}
 
-.excos .excos-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
 
 .excos .excos-item .quote-icon-left,
 .excos .excos-item .quote-icon-right {
