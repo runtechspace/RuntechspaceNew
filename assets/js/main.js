@@ -3,25 +3,32 @@ document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
   /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.whatsapp');
+ * Open WhatsApp link in a new tab/window
+ */
+let scrollTop = document.querySelector('.whatsapp');
 
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
+function openWhatsAppInNewTab() {
+  const whatsappLink = 'https://wa.me/2348124793331?text=Hello%20RUNTECHSPACE,%20I%20would%20like%20to%20ask%20some%20questions%20about';
+  window.open(whatsappLink, '_blank');
+}
+
+scrollTop.addEventListener('click', (e) => {
+  e.preventDefault();
+  openWhatsAppInNewTab();
+});
+
+/**
+ * Show/hide scroll top button
+ */
+function toggleScrollTop() {
+  if (scrollTop) {
+    window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
+}
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+window.addEventListener('load', toggleScrollTop);
+document.addEventListener('scroll', toggleScrollTop);
+
 
   /**
    * Preloader

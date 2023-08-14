@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -8,7 +7,7 @@
   <title>RUNTECHSPACE - An Innovative Tech Hub</title>
   <meta name="description" content="Empowering Tomorrow's Innovators! Empowering students nationwide with tech skills through teaching, bootcamps, hackathons, and dynamic competitions. Shape the future with RUNTECHSPACE">
   <meta name="author" content="RUNTECHSPACE">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="RUNTECHSPACE">
   <meta property="og:title" content="RUNTECHSPACE - Empowering Tomorrow's Innovators!">
   <meta property="og:description" content="Nurturing Tech Innovators in The Redeemer's University and Nationwide. Join the Future with RUNTECHSPACE!">
   <meta property="og:image" content="assets/img/slide6.jpg">
@@ -61,7 +60,7 @@
           <li><a href="https://instagram.com/runtechspace?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank">Our Stories</a></li>
           <li class="dropdown has-dropdown"><a href="#"><span>Collaborate</span> <i class="bi bi-chevron-down"></i></a>
             <ul class="dd-box-shadow">
-              <li><a href="https://wa.me/2348124793331?text=Hello%20Williams!%20We're%20excited%20to%20explore%20partnership%20options%20that%20align%20with%20our%20organization.%20Let's%20collaborate%20to%20empower%20tomorrow's%20innovators%20together!">Partnership</a></li>
+              <li><a href="#" id="redirectLink" >Partnership</a></li>
               <li><a href="https://wa.me/2348124793331?text=Hello%20Williams!%20We're%20excited%20to%20explore%20sponsorship%20options%20that%20align%20with%20our%20organization.%20Let's%20collaborate%20to%20empower%20tomorrow's%20innovators%20together!">Sponsorship</a></li>
 
               
@@ -957,7 +956,7 @@
           <h4>Useful Links</h4>
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="index.html#about">About us</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Gallery</a></li>
             <li><a href="donate.html">Support RUNTECHSPACE</a></li>
@@ -1003,7 +1002,7 @@
 
   </footer><!-- End Footer -->
 
-  <a href="#" id="whatsapp" class="whatsapp d-flex align-items-center justify-content-center" title="Contact Us via WhatsApp"><i class="bi bi-whatsapp"></i></a>
+  <a href="https://wa.me/2348124793331?text=Hello%20RUNTECHSPACE,%20I%20would%20like%20to%20ask%20some%20questions%20about" target="_blank" id="whatsapp" class="whatsapp d-flex align-items-center justify-content-center" title="Contact Us via WhatsApp"><i class="bi bi-whatsapp"></i></a>
 
   <div id="preloader">
     <div></div>
@@ -1013,6 +1012,20 @@
   </div>
 
   <!-- Vendor JS Files -->
+
+  <script>
+    document.getElementById("redirectLink").addEventListener("click", function(event) {
+      event.preventDefault(); // Prevent the default link behavior
+
+      var confirmRedirect = confirm("This link allows a direct message with our representative. Do you want to proceed?");
+
+      if (confirmRedirect) {
+        setTimeout(function() {
+          window.location.href = "https://wa.me/2348124793331?text=Hello%20Williams!%20We're%20excited%20to%20explore%20partnership%20options%20that%20align%20with%20our%20organization.%20Let's%20collaborate%20to%20empower%20tomorrow's%20innovators%20together!"; // Redirect after a delay
+        }, 2000); // 2000 milliseconds (2 seconds) delay
+      }
+    });
+  </script>
   
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
