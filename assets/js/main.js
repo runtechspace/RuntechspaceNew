@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 let scrollTop = document.querySelector('.whatsapp');
 
 function openWhatsAppInNewTab() {
-  const whatsappLink = 'https://wa.me/2348124793331?text=Hello%20RUNTECHSPACE,%20I%20would%20like%20to%20ask%20some%20questions%20about';
+  const whatsappLink = 'https://chat.whatsapp.com/DfhuhbulYnYHWx4rBTFeOo';
   window.open(whatsappLink, '_blank');
 }
 
