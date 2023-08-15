@@ -543,6 +543,8 @@ section {
   }
 }
 
+
+
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
@@ -1360,265 +1362,217 @@ section {
   z-index: 2;
 }
 
-/* Portfolio Section - Home Page
+/* gallery Section - Home Page
 ------------------------------*/
-.portfolio .portfolio-filters {
+/*--------------------------------------------------------------
+# gallery
+--------------------------------------------------------------*/
+.gallery{
+  background-color: whitesmoke;
+  color: #0094Ac;
+  padding: 25px;
+}
+
+.gallery .gallery-item {
+  margin-bottom: 30px;
+}
+
+.gallery #gallery-flters {
   padding: 0;
-  margin: 0 auto 20px auto;
+  margin: 0 0 35px 0;
   list-style: none;
   text-align: center;
 }
 
-.portfolio .portfolio-filters li {
+.gallery #gallery-flters li {
   cursor: pointer;
+  margin: 0 15px 15px 0;
   display: inline-block;
-  padding: 8px 20px 10px 20px;
-  margin: 0;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: whitesmoke;
   margin-bottom: 5px;
-  border-radius: 50px;
   transition: all 0.3s ease-in-out;
-  font-family: var(--font-secondary);
 }
 
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  color: var(--color-inverse);
-  background-color: var(--color-primary);
+.gallery #gallery-flters li:hover,
+.gallery #gallery-flters li.filter-active {
+  color: #0094Ac;
 }
 
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
-}
-
-.portfolio .portfolio-filters li:last-child {
+.gallery #gallery-flters li:last-child {
   margin-right: 0;
 }
 
-@media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 0 10px 0;
-  }
-}
-
-.portfolio .portfolio-item {
+.gallery .gallery-wrap {
+  transition: 0.3s;
   position: relative;
   overflow: hidden;
+  border-radius: 8px;
+  z-index: 1;
 }
 
-.portfolio .portfolio-item .portfolio-info {
+.gallery .gallery-wrap::before {
+  content: "";
+  background: rgba(122, 105, 96, 0.6);
+  position: absolute;
+  left: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+}
+
+.gallery .gallery-wrap img {
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.gallery .gallery-wrap .gallery-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  top: calc(50% - 32px);
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+}
+
+.gallery .gallery-wrap .gallery-links a {
+  color: #2dc4db;
+  margin: 0 4px;
+  line-height: 0;
+  background-color: #fff;
+  padding-top: 6px;
+  padding-right: 1px;
+  border-radius: 50px;
+  text-align: center;
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.gallery .gallery-wrap .gallery-links a i {
+  line-height: 0;
+  font-size: 20px;
+}
+
+.gallery .gallery-wrap .gallery-links a:hover {
+  background: #0094Ac;
+  color: #fff;
+}
+
+.gallery .gallery-wrap .gallery-info {
   opacity: 0;
   position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: -100%;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  text-align: center;
   z-index: 3;
-  transition: all ease-in-out 0.5s;
-  background: rgba(var(--color-box-background-rgb), 0.9);
-  padding: 15px;
+  transition: all ease-in-out 0.3s;
 }
 
-.portfolio .portfolio-item .portfolio-info h4 {
-  color: var(--color-secondary);
-  font-size: 18px;
+.gallery .gallery-wrap .gallery-info h4 {
+  font-size: 20px;
+  color: #fff;
   font-weight: 600;
-  padding-right: 50px;
 }
 
-.portfolio .portfolio-item .portfolio-info p {
-  color: rgba(var(--color-default-rgb), 0.7);
+.gallery .gallery-wrap .gallery-info p {
+  color: #ffffff;
   font-size: 14px;
-  margin-bottom: 0;
-  padding-right: 50px;
+  text-transform: uppercase;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link,
-.portfolio .portfolio-item .portfolio-info .details-link {
-  position: absolute;
-  right: 50px;
-  font-size: 24px;
-  top: calc(50% - 14px);
-  color: rgba(var(--color-default-rgb), 0.7);
-  transition: 0.3s;
-  line-height: 0;
+.gallery .gallery-wrap:hover::before {
+  left: 0;
 }
 
-.portfolio .portfolio-item .portfolio-info .preview-link:hover,
-.portfolio .portfolio-item .portfolio-info .details-link:hover {
-  color: var(--color-primary);
+.gallery .gallery-wrap:hover .gallery-links {
+  opacity: 1;
+  top: calc(50% - 16px);
 }
 
-.portfolio .portfolio-item .portfolio-info .details-link {
-  right: 14px;
-  font-size: 28px;
-}
-
-.portfolio .portfolio-item:hover .portfolio-info {
+.gallery .gallery-wrap:hover .gallery-info {
   opacity: 1;
   bottom: 0;
 }
 
-/* Pricing Section - Home Page
-------------------------------*/
-.pricing {
-  padding: 60px 0 120px 0;
+/*--------------------------------------------------------------
+# gallery Details
+--------------------------------------------------------------*/
+.gallery-details {
+  padding-top: 40px;
 }
 
-.pricing .section-title {
-  margin-bottom: 40px;
+.gallery-details .gallery-details-slider img {
+  width: 100%;
 }
 
-.pricing .pricing-item {
-  background: var(--color-box-background);
-  box-shadow: 0 3px 20px -2px rgba(var(--color-default-rgb), 0.1);
-  padding: 60px 40px;
-  height: 100%;
+.gallery-details .gallery-details-slider .swiper-pagination {
+  margin-top: 20px;
   position: relative;
-  border-radius: 15px;
 }
 
-.pricing h3 {
-  color: var(--color-secondary);
-  font-weight: 600;
-  margin-bottom: 15px;
-  font-size: 20px;
-  text-align: center;
+.gallery-details .gallery-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #0094Ac;
 }
 
-.pricing .icon {
-  margin: 30px auto 20px auto;
-  width: 70px;
-  height: 70px;
-  background: var(--color-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-  transform-style: preserve-3d;
-}
-
-.pricing .icon i {
-  color: var(--color-background);
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-  line-height: 0;
-}
-
-.pricing .icon::before {
-  position: absolute;
-  content: "";
-  height: 86px;
-  width: 86px;
-  border-radius: 50%;
-  background: #0094Ac;
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-1px);
-}
-
-.pricing .icon::after {
-  position: absolute;
-  content: "";
-  height: 102px;
-  width: 102px;
-  border-radius: 50%;
-  background: #0094Ac;
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-2px);
-}
-
-.pricing h4 {
-  font-size: 48px;
-  color: var(--color-primary);
-  font-weight: 700;
-  font-family: var(--font-primary);
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-.pricing h4 sup {
-  font-size: 28px;
-}
-
-.pricing h4 span {
-  color: rgba(var(--color-default-rgb), 0.5);
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.pricing ul {
-  padding: 20px 0;
-  list-style: none;
-  color: rgba(var(--color-default-rgb), 0.8);
-  text-align: left;
-  line-height: 20px;
-}
-
-.pricing ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.pricing ul i {
-  color: #059652;
-  font-size: 24px;
-  padding-right: 3px;
-}
-
-.pricing ul .na {
-  color: rgba(var(--color-default-rgb), 0.3);
-}
-
-.pricing ul .na i {
-  color: rgba(var(--color-default-rgb), 0.3);
-}
-
-.pricing ul .na span {
-  text-decoration: line-through;
-}
-
-.pricing .buy-btn {
-  color: rgba(var(--color-default-rgb), 0.8);
-  background-color: var(--color-inverse);
-  display: inline-block;
-  padding: 10px 40px;
-  border-radius: 4px;
-  border: 1px solid rgba(var(--color-default-rgb), 0.2);
-  transition: none;
-  font-size: 16px;
-  font-weight: 600;
-  font-family: var(--font-primary);
-  transition: 0.3s;
-}
-
-.pricing .buy-btn:hover {
-  background-color: var(--color-primary);
-  color: var(--color-inverse);
-}
-
-.pricing .featured {
-  z-index: 10;
-  border: 3px solid var(--color-primary);
-}
-
-.pricing .featured .buy-btn {
-  background-color: var(--color-primary);
-  color: var(--color-inverse);
-}
-
-.pricing .featured .buy-btn:hover {
+.gallery-details .gallery-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #0094Ac;
 }
 
-@media (min-width: 992px) {
-  .pricing .featured {
-    transform: scale(1.15);
-  }
+.gallery-details .gallery-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(122, 105, 96, 0.08);
 }
+
+.gallery-details .gallery-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.gallery-details .gallery-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.gallery-details .gallery-info ul li+li {
+  margin-top: 10px;
+}
+
+.gallery-details .gallery-description {
+  padding-top: 30px;
+}
+
+.gallery-details .gallery-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.gallery-details .gallery-description p {
+  padding: 0;
+}
+
+
+/* Pricing Section - Home Page
+------------------------------*/
 
 /* Faq Section - Home Page
 ------------------------------*/
@@ -2033,26 +1987,26 @@ section {
 
 
 /*--------------------------------------------------------------
-# Portfolio Details Page
+# gallery Details Page
 --------------------------------------------------------------*/
-/* Portfolio-details Section - Portfolio Details Page
+/* gallery-details Section - gallery Details Page
 ------------------------------*/
-.portfolio-details .portfolio-details-slider img {
+.gallery-details .gallery-details-slider img {
   width: 100%;
 }
 
-.portfolio-details .swiper-wrapper {
+.gallery-details .swiper-wrapper {
   height: auto;
 }
 
-.portfolio-details .swiper-button-prev,
-.portfolio-details .swiper-button-next {
+.gallery-details .swiper-button-prev,
+.gallery-details .swiper-button-next {
   width: 48px;
   height: 48px;
 }
 
-.portfolio-details .swiper-button-prev:after,
-.portfolio-details .swiper-button-next:after {
+.gallery-details .swiper-button-prev:after,
+.gallery-details .swiper-button-next:after {
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(0, 0, 0, 0.15);
   font-size: 24px;
@@ -2065,20 +2019,20 @@ section {
   transition: 0.3s;
 }
 
-.portfolio-details .swiper-button-prev:hover:after,
-.portfolio-details .swiper-button-next:hover:after {
+.gallery-details .swiper-button-prev:hover:after,
+.gallery-details .swiper-button-next:hover:after {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 575px) {
 
-  .portfolio-details .swiper-button-prev,
-  .portfolio-details .swiper-button-next {
+  .gallery-details .swiper-button-prev,
+  .gallery-details .swiper-button-next {
     display: none;
   }
 }
 
-.portfolio-details .portfolio-info h3 {
+.gallery-details .gallery-info h3 {
   color: var(--color-secondary);
   font-size: 22px;
   font-weight: 700;
@@ -2087,7 +2041,7 @@ section {
   position: relative;
 }
 
-.portfolio-details .portfolio-info h3:after {
+.gallery-details .gallery-info h3:after {
   content: "";
   position: absolute;
   display: block;
@@ -2098,26 +2052,26 @@ section {
   bottom: 0;
 }
 
-.portfolio-details .portfolio-info ul {
+.gallery-details .gallery-info ul {
   list-style: none;
   padding: 0;
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li {
+.gallery-details .gallery-info ul li {
   display: flex;
   flex-direction: column;
   padding-bottom: 15px;
 }
 
-.portfolio-details .portfolio-info ul strong {
+.gallery-details .gallery-info ul strong {
   text-transform: uppercase;
   font-weight: 400;
   color: rgba(var(--color-default-rgb), 0.5);
   font-size: 14px;
 }
 
-.portfolio-details .portfolio-info .btn-visit {
+.gallery-details .gallery-info .btn-visit {
   padding: 8px 40px;
   background: var(--color-primary);
   color: var(--color-inverse);
@@ -2125,29 +2079,29 @@ section {
   transition: 0.3s;
 }
 
-.portfolio-details .portfolio-info .btn-visit:hover {
+.gallery-details .gallery-info .btn-visit:hover {
   background: #0094Ac;
 }
 
-.portfolio-details .portfolio-description h2 {
+.gallery-details .gallery-description h2 {
   color: var(--color-secondary);
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.portfolio-details .portfolio-description p {
+.gallery-details .gallery-description p {
   padding: 0;
 }
 
-.portfolio-details .portfolio-description .excos-item {
+.gallery-details .gallery-description .excos-item {
   padding: 30px 30px 0 30px;
   position: relative;
   background: var(--color-box-background);
   margin-bottom: 50px;
 }
 
-.portfolio-details .portfolio-description .excos-item .excos-img {
+.gallery-details .gallery-description .excos-item .excos-img {
   width: 90px;
   border-radius: 50px;
   border: 6px solid var(--color-background);
@@ -2155,33 +2109,33 @@ section {
   margin: 0 10px 0 0;
 }
 
-.portfolio-details .portfolio-description .excos-item h3 {
+.gallery-details .gallery-description .excos-item h3 {
   font-size: 18px;
   font-weight: bold;
   margin: 15px 0 5px 0;
   padding-top: 20px;
 }
 
-.portfolio-details .portfolio-description .excos-item h4 {
+.gallery-details .gallery-description .excos-item h4 {
   font-size: 14px;
   color: #6c757d;
   margin: 0;
 }
 
-.portfolio-details .portfolio-description .excos-item .quote-icon-left,
-.portfolio-details .portfolio-description .excos-item .quote-icon-right {
+.gallery-details .gallery-description .excos-item .quote-icon-left,
+.gallery-details .gallery-description .excos-item .quote-icon-right {
   color: #0094Ac;
   font-size: 26px;
   line-height: 0;
 }
 
-.portfolio-details .portfolio-description .excos-item .quote-icon-left {
+.gallery-details .gallery-description .excos-item .quote-icon-left {
   display: inline-block;
   left: -5px;
   position: relative;
 }
 
-.portfolio-details .portfolio-description .excos-item .quote-icon-right {
+.gallery-details .gallery-description .excos-item .quote-icon-right {
   display: inline-block;
   right: -5px;
   position: relative;
@@ -2189,7 +2143,7 @@ section {
   transform: scale(-1, -1);
 }
 
-.portfolio-details .portfolio-description .excos-item p {
+.gallery-details .gallery-description .excos-item p {
   font-style: italic;
   margin: 0 0 15px 0 0 0;
   padding: 0;
